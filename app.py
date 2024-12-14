@@ -3,22 +3,10 @@ import boto3
 import json
 import pandas as pd
 import requests
+st.caching.clear_cache()
 
-# Acessando as credenciais da AWS armazenadas nos Secrets do Streamlit Cloud
-aws_access_key_id = st.secrets["aws"]["AWS_ACCESS_KEY_ID"]
-aws_secret_access_key = st.secrets["aws"]["AWS_SECRET_ACCESS_KEY"]
-
-# Criação da sessão do boto3 com as credenciais passadas diretamente
-session = boto3.Session(
-    aws_access_key_id=aws_access_key_id,
-    aws_secret_access_key=aws_secret_access_key,
-    region_name='us-west-2'  # Substitua pela sua região, se necessário
-)
-
-# Criando o cliente do serviço AWS Bedrock (ou outro serviço que você esteja utilizando)
+session = boto3.Session(profile_name="iaedn")
 client = session.client('bedrock-runtime', region_name='us-west-2')
-
-# Agora você pode continuar a usar 'client' normalmente
 
 # =========================
 # Função para chamada ao AWS Bedrock
@@ -95,7 +83,7 @@ if st.button("Enviar"):
         with st.spinner("Por favor aguarde um momento..."):
             # Enviando todas as mensagens, incluindo as ocultas, para o modelo
             model_response = call_bedrock_model(
-                [msg for msg in st.session_state.chat_history]  # Enviar todas as mensagens independentemente de estarem ocultas
+                [msg for msg in st.session_state.chat_history]  # Enviar todas as mensagens, independentemente de estarem ocultas
             )
 
             add_message_to_history("assistant", model_response)

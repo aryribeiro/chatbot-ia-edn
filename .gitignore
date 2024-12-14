@@ -1,2 +1,5 @@
 .venv
 /.venv
+aws/credentials
+aws/config
+awscliv2.zip

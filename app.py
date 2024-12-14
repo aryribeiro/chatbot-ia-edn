@@ -4,16 +4,6 @@ import json
 import pandas as pd
 import requests
 
-aws_access_key_id = st.secrets["aws"]["AWS_ACCESS_KEY_ID"]
-aws_secret_access_key = st.secrets["aws"]["AWS_SECRET_ACCESS_KEY"]
-
-# Criar uma sessão do boto3
-session = boto3.Session(
-    aws_access_key_id=aws_access_key_id,
-    aws_secret_access_key=aws_secret_access_key,
-    region_name='us-west-2'  # Altere para a sua região
-)
-
 #session = boto3.Session(profile_name="iaedn")
 client = session.client('bedrock-runtime', region_name='us-west-2')
 

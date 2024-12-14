@@ -3,7 +3,6 @@ import boto3
 import json
 import pandas as pd
 import requests
-st.caching.clear_cache()
 
 session = boto3.Session(profile_name="iaedn")
 client = session.client('bedrock-runtime', region_name='us-west-2')

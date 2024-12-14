@@ -82,7 +82,7 @@ if st.button("Enviar"):
         with st.spinner("Por favor aguarde um momento..."):
             # Enviando todas as mensagens, incluindo as ocultas, para o modelo
             model_response = call_bedrock_model(
-                [msg for msg in st.session_state.chat_history]  # Enviar todas as mensagens, independentemente de estarem ocultas
+                [msg for msg in st.session_state.chat_history]  # Enviar todas as mensagens independentemente de estarem ocultas
             )
 
             add_message_to_history("assistant", model_response)

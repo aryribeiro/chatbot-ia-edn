@@ -4,8 +4,21 @@ import json
 import pandas as pd
 import requests
 
-session = boto3.Session(profile_name="iaedn")
+# Acessando as credenciais da AWS armazenadas nos Secrets do Streamlit Cloud
+aws_access_key_id = st.secrets["aws"]["AWS_ACCESS_KEY_ID"]
+aws_secret_access_key = st.secrets["aws"]["AWS_SECRET_ACCESS_KEY"]
+
+# Criação da sessão do boto3 com as credenciais passadas diretamente
+session = boto3.Session(
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key,
+    region_name='us-west-2'  # Substitua pela sua região, se necessário
+)
+
+# Criando o cliente do serviço AWS Bedrock (ou outro serviço que você esteja utilizando)
 client = session.client('bedrock-runtime', region_name='us-west-2')
+
+# Agora você pode continuar a usar 'client' normalmente
 
 # =========================
 # Função para chamada ao AWS Bedrock

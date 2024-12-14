@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import requests
 
-#session = boto3.Session(profile_name="iaedn")
+session = boto3.Session(profile_name="iaedn")
 client = session.client('bedrock-runtime', region_name='us-west-2')
 
 # =========================

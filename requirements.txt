@@ -1,0 +1,6 @@
+streamlit
+streamlit-authenticator
+requests
+pandas
+boto3
+awscli

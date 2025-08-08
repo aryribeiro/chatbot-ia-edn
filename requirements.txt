@@ -1,4 +1,4 @@
-streamlit
+streamlit==1.47.1
 streamlit-authenticator
 requests
 pandas

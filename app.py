@@ -22,7 +22,7 @@ client = session.client("bedrock-runtime", region_name="us-east-1")
 def call_bedrock_model(messages):
     payload = {
         "messages": [{"role": msg["role"], "content": msg["content"]} for msg in messages],
-        "max_tokens": 200,
+        "max_tokens": 500,
         "anthropic_version": "bedrock-2023-05-31",
         "temperature": 1.0,
         "top_p": 0.95,
@@ -109,9 +109,9 @@ for message in st.session_state.chat_history:
 st.markdown("""
 <hr>
     <div style="text-align: center;">
-    <h4>🤖 ChatBot de IA em homenagem a Escola da Nuvem. ⛅</h4>
+    <h4>⛅ ChatBot de IA em homenagem a Escola da Nuvem</h4>
     💬 Por <strong>Ary Ribeiro</strong>. Contato, através do email: <a href="mailto:aryribeiro@gmail.com">aryribeiro@gmail.com</a><br>
-    <em>Este projeto utiliza o AWS Bedrock para criar um chatbot interativo, com o objetivo de fornecer informações sobre a Escola da Nuvem (EdN). O chatbot foi desenvolvido em Python e Streamlit, integrado com o modelo "anthropic.claude-v2.1" do AWS Bedrock</em>
+    <em>Este projeto utiliza o AWS Bedrock para criar um chatbot interativo, com o objetivo de fornecer informações sobre a Escola da Nuvem (EdN). O chatbot foi desenvolvido em Python e Streamlit, usando o modelo Claude 3 da Anthropic.</em>
 </div>
 """, unsafe_allow_html=True)
 

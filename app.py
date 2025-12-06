@@ -31,7 +31,7 @@ def call_bedrock_model(messages):
 
     try:
         response = client.invoke_model_with_response_stream(
-            modelId="anthropic.claude-v2:1",
+            modelId="anthropic.claude-3-sonnet-20240229-v1:0",
             body=json.dumps(payload).encode("utf-8"),
             contentType="application/json",
             accept="application/json"

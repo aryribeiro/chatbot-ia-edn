@@ -84,8 +84,42 @@ STOPWORDS = {
 # (passada única evita reprocessar a URL de um link já convertido em <a>).
 PADRAO_LINK = re.compile(
     r'\[(?P<rotulo>[^\]]+)\]\((?P<md_url>https?://[^\s)]+)\)'
-    r'|(?P<url>https?://[^\s<>"]+)'
+    r'|(?P<url>https?://\S+)'
 )
+
+# Caracteres que podem existir numa URL (RFC 3986). Emoji, aspas, acentos e
+# espaços rígidos ficam de fora: o modelo costuma grudar um emoji no fim do
+# endereço (ex.: "https://escoladanuvem.org/cursos/.🌟") e ele não pode entrar
+# no href, senão o link abre quebrado.
+CARACTERES_URL = set(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    "0123456789-._~:/?#[]@!$&'()*+,;=%"
+)
+
+# Pontuação que encerra a frase e não pertence ao endereço
+PONTUACAO_FINAL = ".,;:!?)"
+
+
+def _separar_url(bruto: str) -> Tuple[str, str]:
+    """
+    Separa a URL do que veio grudado nela.
+
+    Corta no primeiro caractere inválido para URL (emoji, por exemplo) e
+    devolve (url, sobra) — a sobra é reposta como texto, depois da âncora.
+    """
+    corte = len(bruto)
+    for i, caractere in enumerate(bruto):
+        if caractere not in CARACTERES_URL:
+            corte = i
+            break
+
+    url, sobra = bruto[:corte], bruto[corte:]
+
+    while url and url[-1] in PONTUACAO_FINAL:
+        sobra = url[-1] + sobra
+        url = url[:-1]
+
+    return url, sobra
 
 
 def linkificar(texto: str) -> str:
@@ -97,20 +131,19 @@ def linkificar(texto: str) -> str:
     """
     def _para_anchor(m: re.Match) -> str:
         if m.group("md_url"):
+            url, _ = _separar_url(m.group("md_url"))
             rotulo = m.group("rotulo")
-            url = m.group("md_url")
-            sufixo = ""
+            sobra = ""
         else:
-            url = m.group("url")
-            # Pontuação final da frase não faz parte da URL (ex.: "...cursos/.")
-            sufixo = ""
-            while url and url[-1] in ".,;:!?)":
-                sufixo = url[-1] + sufixo
-                url = url[:-1]
+            url, sobra = _separar_url(m.group("url"))
             rotulo = url
+
+        if not url:  # nada aproveitável: devolve o texto original
+            return m.group(0)
+
         return (
             f'<a href="{url}" target="_blank" rel="noopener noreferrer">{rotulo}</a>'
-            f'{sufixo}'
+            f'{sobra}'
         )
 
     return PADRAO_LINK.sub(_para_anchor, html.escape(texto))

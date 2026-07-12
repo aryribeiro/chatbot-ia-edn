@@ -23,7 +23,7 @@ logger = logging.getLogger("chatbot_edn")
 # Configurações
 MAX_HISTORY_TOKENS = 800
 MAX_INPUT_LENGTH = 512
-CACHE_EXPIRY = 3600  # Cache expira em 1 hora (segundos)
+CACHE_EXPIRY = 28800  # Cache expira em 8 horas (segundos)
 MAX_RETRIES = 3
 API_TIMEOUT = 30
 MAX_CONVERSATION_TURNS = 10

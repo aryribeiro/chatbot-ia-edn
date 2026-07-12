@@ -8,10 +8,23 @@ Chatbot interativo desenvolvido com [Streamlit](https://streamlit.io/) e integra
 ## Funcionalidades
 
 - Interface de chat com histórico e balões de mensagem
-- Respostas restritas ao contexto da Escola da Nuvem (system prompt com regras anti-alucinação)
+- **Base de conhecimento (RAG)** extraída do site oficial: o chatbot responde apenas com base nos documentos de `base_conhecimento.json`
+- Respostas restritas à Escola da Nuvem e sempre em português do Brasil, mesmo que a pergunta venha em outro idioma
+- Regras anti-alucinação: não inventa datas, vagas, requisitos nem links; quando não sabe, direciona ao site oficial
 - Cache de respostas em SQLite (expira em 1 hora)
 - Retentativas com backoff exponencial em caso de rate limit ou erro de servidor
 - Truncamento automático do histórico para controlar o consumo de tokens
+
+## Base de conhecimento
+
+O arquivo `base_conhecimento.json` contém documentos curados a partir do site oficial da EdN
+(institucional, cursos, processo seletivo, empregabilidade, certificações, voluntariado,
+parcerias, contato e transparência), cada um com suas `palavras_chave` e a `fonte` (URL).
+
+A cada pergunta, o app pontua os documentos por sobreposição de termos e injeta os mais
+relevantes no prompt do sistema. O modelo é instruído a responder **exclusivamente** com base
+nesse contexto. Para atualizar o conteúdo do chatbot, basta editar o JSON — não é preciso
+mexer no código.
 
 ## Requisitos
 

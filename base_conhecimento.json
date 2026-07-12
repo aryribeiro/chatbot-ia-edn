@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "organizacao": "Escola da Nuvem (EdN)",
+    "site_oficial": "https://escoladanuvem.org/",
+    "pagina_cursos": "https://escoladanuvem.org/cursos/",
+    "extraido_em": "2026-07-11",
+    "observacao": "Base de conhecimento curada a partir do site oficial. Toda resposta do chatbot deve se apoiar exclusivamente nestes documentos. Datas de turmas, vagas e prazos NAO constam aqui porque mudam a cada ciclo: nesses casos, direcionar o usuario para a pagina de cursos."
+  },
+  "documentos": [
+    {
+      "id": "institucional-o-que-e",
+      "categoria": "institucional",
+      "titulo": "O que e a Escola da Nuvem",
+      "palavras_chave": ["o que e", "quem sao", "escola da nuvem", "edn", "ong", "osc", "instituicao", "organizacao", "sobre"],
+      "conteudo": "A Escola da Nuvem (EdN) e uma Organizacao da Sociedade Civil (OSC) sem fins lucrativos, fundada em 2020, que oferece capacitacao gratuita em tecnologia para pessoas que enfrentam dificuldades para iniciar, migrar ou desenvolver uma carreira na area. Os cursos sao 100% online, gratuitos e com aulas ao vivo. O conteudo abrange computacao em nuvem, inteligencia artificial, plataformas No Code, Power Apps e outras solucoes digitais. A EdN se descreve como um ecossistema regenerativo que acelera a evolucao de pessoas e empresas, oferecendo uma jornada completa: capacitacao gratuita, suporte de carreira e conexao com o mercado de trabalho.",
+      "fonte": "https://escoladanuvem.org/sobre/"
+    },
+    {
+      "id": "institucional-missao-visao-valores",
+      "categoria": "institucional",
+      "titulo": "Missao, visao e valores",
+      "palavras_chave": ["missao", "visao", "valores", "proposito", "principios", "cultura"],
+      "conteudo": "Missao: combater a vulnerabilidade por meio da educacao profissional em tecnologia, para impulsionar a inclusao produtiva. Visao: ser referencia na formacao e na empregabilidade de pessoas em situacao de vulnerabilidade para o mercado de tecnologia. Valores: Pessoas ajudando pessoas; Amor ao bem; Criatividade e inovacao; Compromisso e transparencia; Excelencia e profissionalismo.",
+      "fonte": "https://escoladanuvem.org/sobre/"
+    },
+    {
+      "id": "institucional-historia",
+      "categoria": "institucional",
+      "titulo": "Historia e linha do tempo (2020 a 2025)",
+      "palavras_chave": ["historia", "fundacao", "quando foi criada", "linha do tempo", "trajetoria", "surgiu", "comecou"],
+      "conteudo": "2020: a Escola da Nuvem foi fundada pela uniao de profissionais do mercado de TI. 2021: 121 alunos formados, com operacao no formato self-paced. 2022: 327 alunos formados em aulas ao vivo e inicio da parceria com a AWS. 2023: mais de 3.000 formacoes e mais de 400 empresas contratantes. 2024: mais de 3.000 alunos formados, mais de 600 empresas contratantes e mais de 320 voluntarios. 2025: mais de 2.800 alunos formados, mais de 1.600 certificacoes, mais de 1.700 voluntarios cadastrados e mais de 1.450 alunos empregados.",
+      "fonte": "https://escoladanuvem.org/sobre/"
+    },
+    {
+      "id": "institucional-numeros",
+      "categoria": "institucional",
+      "titulo": "Numeros e impacto",
+      "palavras_chave": ["numeros", "impacto", "quantos alunos", "estatisticas", "resultados", "formados", "empregados"],
+      "conteudo": "Numeros divulgados pela Escola da Nuvem: mais de 8.800 alunos formados; mais de 3.600 alunos empregados; mais de 1.200 empresas contratantes; mais de 1.800 voluntarios cadastrados. Em 2024, mais de 3.000 estudantes foram formados em fundamentos de AWS e 1.300 obtiveram a certificacao AWS Cloud Practitioner.",
+      "fonte": "https://escoladanuvem.org/"
+    },
+    {
+      "id": "institucional-fundadores-equipe",
+      "categoria": "institucional",
+      "titulo": "Fundadores, equipe, conselho e comite tecnico",
+      "palavras_chave": ["fundadores", "fundador", "fundou", "fundada", "fundaram", "criou", "criador", "criada", "equipe", "conselho", "comite", "diretoria", "quem criou", "lideranca", "presidente", "ceo", "time"],
+      "conteudo": "Fundadores: Rafael Marangoni, Flavio Rescia Dias e Guilherme Barreiro. Equipe interna citada no site: KK (Chief Revenue Officer), Cristina Daniel (Marketing), Fernanda Azarite (Empregabilidade), Ranny Araujo (Gerente de Contas) e Ana Leticia Lucca (Empregabilidade). Conselho Consultivo: Victor Arnaud (Equinix), Celia Schlithler (consultora), Gustavo Araujo (Distrito), Mauricio Fernandes (Dedalus), Ricardo Fernandes (executivo de tecnologia), Marc Tawil (Exame) e Humberto Moises (CIO). Comite Tecnico: Felipe Barretto (E-core), Alexandre Vieira (SENAI Suico-Brasileiro), Lucas Barbosa (Ingram Micro) e Gustavo Maia (Enkel).",
+      "fonte": "https://escoladanuvem.org/sobre/"
+    },
+    {
+      "id": "curso-tech-para-todos",
+      "categoria": "cursos",
+      "titulo": "Curso Tech para Todos (fundamentos de tecnologia)",
+      "palavras_chave": ["tech para todos", "iniciante", "comecar do zero", "primeiro curso", "fundamentos de tecnologia", "sem experiencia", "basico"],
+      "conteudo": "Tech para Todos e o curso de entrada da Escola da Nuvem, 100% gratuito e online com aulas ao vivo, voltado a quem tem pouca ou nenhuma experiencia em tecnologia. Duracao: 3 meses, com 3 horas de aula por dia, de segunda a sexta-feira. Todas as aulas sao sincronas (ao vivo), com professores e monitores em tempo real; nao ha conteudo gravado. Conteudo: Modulo 1 (topicos gerais): conceitos de computacao, sistemas operacionais, redes, seguranca digital e ferramentas de estudo. Modulo 2 (competencias tecnicas): ambiente virtual e sistemas operacionais, recursos computacionais, redes e seguranca na internet, suporte N1, matematica e logica aplicadas, logica de programacao, interpretacao de texto, documentos YAML e JSON e introducao a Python. Modulo 3 (desenvolvimento profissional): gestao pessoal, comunicacao, trabalho em equipe, postura profissional, autoconhecimento, construcao de carreira, LinkedIn, curriculo e processos seletivos. Requisitos: ter entre 18 e 29 anos, ensino medio completo, residir em Sao Paulo capital, Regiao Metropolitana ou Campinas, estar desempregado, ser autonomo ou estar em transicao de carreira, ter computador com internet e disponibilidade de 3 horas diarias de segunda a sexta. Custo: 100% gratuito, sem matricula, taxa ou mensalidade. Inscricao: https://escoladanuvem.org/cursos/",
+      "fonte": "https://escoladanuvem.org/cursos/tech-para-todos/"
+    },
+    {
+      "id": "curso-fundamentos-nuvem",
+      "categoria": "cursos",
+      "titulo": "Curso Fundamentos de Computacao em Nuvem 1 e 2",
+      "palavras_chave": ["fundamentos de computacao em nuvem", "fundamentos nuvem", "cloud", "aws", "restart", "re/start", "curso de nuvem", "computacao em nuvem", "inteligencia artificial", "ia"],
+      "conteudo": "Fundamentos de Computacao em Nuvem 1 e 2 e o programa de evolucao profissional da Escola da Nuvem, 100% gratuito e online com aulas ao vivo. Duracao: 5 meses, com 15 horas semanais (3 horas diarias, de segunda a sexta). Todas as aulas sao sincronas (ao vivo), com professores e monitores; nao ha conteudo gravado. Conteudo: (1) Nivelamento e tecnologia: fundamentos de computacao em nuvem, introducao a IA e No Code, fundamentos de TI, laboratorios praticos, introducao a programacao e Python, fundamentos de Linux e scripts. (2) Computacao em nuvem com conteudo AWS: conceitos de computacao, armazenamento, rede, seguranca e banco de dados, principais servicos e infraestrutura global da AWS, operacao, automacao e governanca, e projeto final integrado. (3) Inteligencia artificial: fundamentos de IA e machine learning, Python aplicado a IA e ferramentas AWS (Bedrock, Textract, Comprehend, Polly e Lex). (4) Competencias profissionais: comunicacao, trabalho em equipe, definicao de objetivos, pensamento tecnico, preparacao para entrevistas e presenca digital no LinkedIn. O programa e baseado na metodologia AWS re/Start, em parceria com a AWS. Requisitos: ter no minimo 18 anos, ensino medio completo, residir no Brasil, ter disponibilidade de 15 horas semanais, ter computador com internet e se enquadrar em pelo menos um perfil: desempregado, na informalidade, buscando entrar em TI, autonomo ou trabalhando fora da area de TI. Custo: R$ 0, 100% gratuito, sem taxas ocultas. Inscricao: https://escoladanuvem.org/cursos/",
+      "fonte": "https://escoladanuvem.org/cursos/fundamentos-nuvem/"
+    },
+    {
+      "id": "curso-trilhas-extensao",
+      "categoria": "cursos",
+      "titulo": "Trilhas de extensao e continuidade da jornada",
+      "palavras_chave": ["trilhas", "extensao", "arquiteto cloud", "cloudops", "desenvolvimento", "avancado", "depois do curso", "proximos passos", "vendas"],
+      "conteudo": "Alem dos cursos de entrada, a Escola da Nuvem cita na Jornada de Evolucao Profissional a existencia de Trilhas de Extensao, com cursos especializados em Arquiteto Cloud, CloudOps e Desenvolvimento. A jornada tambem menciona a formacao em Fundamentos de Vendas como caminho possivel apos o Tech para Todos. O site nao detalha carga horaria, requisitos nem calendario dessas trilhas: para informacoes atualizadas sobre elas, consulte https://escoladanuvem.org/cursos/",
+      "fonte": "https://escoladanuvem.org/jornada-de-evolucao-profissional/"
+    },
+    {
+      "id": "processo-seletivo",
+      "categoria": "inscricao",
+      "titulo": "Processo seletivo e como se inscrever",
+      "palavras_chave": ["inscricao", "inscrever", "como entrar", "processo seletivo", "prova", "entrevista", "selecao", "matricula", "vaga", "link"],
+      "conteudo": "O processo seletivo da Escola da Nuvem tem as seguintes etapas: (1) preenchimento do formulario de pre-inscricao no site, com nome, e-mail e telefone, seguido de questionario socioeconomico para verificar o perfil; (2) prova MLL, de Matematica, Logica e Leitura, com 8 questoes de multipla escolha, usada para nivelamento; (3) entrevista de engajamento online, para conhecer o candidato e avaliar o comprometimento; (4) resultado enviado por e-mail em ate 3 dias. Quem nao for aprovado pode tentar novamente em um proximo ciclo. As inscricoes validas ocorrem exclusivamente pelo site oficial: https://escoladanuvem.org/cursos/",
+      "fonte": "https://escoladanuvem.org/cursos/fundamentos-nuvem/"
+    },
+    {
+      "id": "gratuidade",
+      "categoria": "inscricao",
+      "titulo": "Gratuidade dos cursos",
+      "palavras_chave": ["gratuito", "gratis", "preco", "valor", "custo", "quanto custa", "pago", "mensalidade", "bolsa", "taxa"],
+      "conteudo": "Todos os cursos da Escola da Nuvem sao 100% gratuitos. Nao ha taxa de matricula, mensalidade, taxa de inscricao nem custos ocultos. A EdN e uma organizacao sem fins lucrativos mantida por empresas parceiras e investidoras.",
+      "fonte": "https://escoladanuvem.org/cursos/"
+    },
+    {
+      "id": "empregabilidade",
+      "categoria": "empregabilidade",
+      "titulo": "Programa de empregabilidade e jornada profissional",
+      "palavras_chave": ["emprego", "empregabilidade", "trabalho", "vaga", "contratacao", "carreira", "mentoria", "jornada", "mercado"],
+      "conteudo": "A Escola da Nuvem mantem um Programa de Empregabilidade com dois componentes: Apoio ao Emprego, com assistencia por ate 12 meses durante e apos a formacao, e Emprego Apoiado, com acompanhamento por mais 12 meses depois da contratacao, totalizando ate 2 anos de suporte. O programa inclui mentoria de carreira, participacao em eventos tecnicos e indicacao a vagas. A Jornada de Evolucao Profissional e progressiva: comeca no Tech para Todos, avanca para Fundamentos de Computacao em Nuvem 1 e 2 e segue para as Trilhas de Extensao. Mais de 3.600 alunos ja foram contratados e mais de 1.200 empresas ja contrataram pessoas formadas pela EdN.",
+      "fonte": "https://escoladanuvem.org/jornada-de-evolucao-profissional/"
+    },
+    {
+      "id": "certificacoes",
+      "categoria": "cursos",
+      "titulo": "Certificacoes e parceria com a AWS",
+      "palavras_chave": ["certificacao", "certificado", "aws", "cloud practitioner", "prova aws", "diploma", "parceria aws"],
+      "conteudo": "A Escola da Nuvem e parceira da AWS desde 2022 e o curso Fundamentos de Computacao em Nuvem e baseado na metodologia AWS re/Start. Os alunos sao direcionados a certificacao AWS Certified Cloud Practitioner. Em 2024, mais de 3.000 estudantes foram formados em fundamentos de AWS e 1.300 obtiveram a certificacao AWS Cloud Practitioner. Em 2025, foram mais de 1.600 certificacoes. A EdN tambem oferece mentoria voluntaria de preparacao para certificacoes AWS.",
+      "fonte": "https://escoladanuvem.org/sobre/"
+    },
+    {
+      "id": "voluntariado",
+      "categoria": "voluntariado",
+      "titulo": "Como ser voluntario na Escola da Nuvem",
+      "palavras_chave": ["voluntario", "voluntariado", "mentor", "ajudar", "contribuir", "doar tempo", "mentoria"],
+      "conteudo": "A Escola da Nuvem recebe voluntarios profissionais para apoiar alunos em inicio de carreira. As principais frentes sao mentoria de carreira e mentoria de preparacao para certificacoes AWS; outras atividades podem ser combinadas conforme a disponibilidade e a experiencia do voluntario. Etapas do cadastro: (1) preencher o formulario de cadastro online; (2) aprovacao pela equipe de gestao; (3) onboarding coletivo com orientacoes institucionais; (4) escolha das atividades conforme o perfil; (5) ingresso na comunidade online no Discord. Espera-se do voluntario comprometimento com os cronogramas, comunicacao transparente, etica e respeitosa, e registro de feedback sobre a experiencia dos alunos. A comunidade tem mais de 500 voluntarios ativos; mais de 1.500 alunos ja foram apoiados e 83% avaliam a mentoria positivamente. Cadastro: https://escoladanuvem.org/seja-voluntario/",
+      "fonte": "https://escoladanuvem.org/seja-voluntario/"
+    },
+    {
+      "id": "parcerias-empresas",
+      "categoria": "parcerias",
+      "titulo": "Parcerias com empresas",
+      "palavras_chave": ["parceria", "parceiro", "empresa", "patrocinio", "investir", "contratar alunos", "apoiar", "doacao"],
+      "conteudo": "Empresas podem se tornar parceiras da Escola da Nuvem em tres modalidades: (1) Parceira Investidora, que investe na formacao de talentos; (2) Parceira Empregadora, que recruta profissionais formados pela EdN e conecta o recrutamento a impacto social positivo; (3) Parceira Social e Educacional, que apoia iniciativas de reducao da vulnerabilidade social por meio da educacao. As contrapartidas incluem acoes de marketing, networking e recrutamento, visibilidade do impacto social gerado, acesso a talentos qualificados e apoio na construcao de equipes diversas. Contato para empresas: contato@escoladanuvem.org ou +55 11 99533-9226. Mais informacoes: https://escoladanuvem.org/seja-nossa-parceira/",
+      "fonte": "https://escoladanuvem.org/seja-nossa-parceira/"
+    },
+    {
+      "id": "parceiros-nomes",
+      "categoria": "parcerias",
+      "titulo": "Empresas parceiras citadas no site",
+      "palavras_chave": ["quais empresas", "parceiros", "patrocinadores", "apoiadores", "aws", "accenture", "ingram", "equinix"],
+      "conteudo": "Empresas parceiras citadas no site da Escola da Nuvem, por cota: Cota Futuro: AWS. Cota Transformacao: Accenture, Ingram e DaRede. Cota Aprendizado: Equinix e Nuclea. Cota Oportunidade: Synexx, Enkel e Dedalus. Cota Recomeco: E-Core, Appoena, Valcann, Amcom, Elevata, RealCloud, Pise4 e Inovti. Parceiros educacionais: Anima Educacao, Impacto e Hackers D'Bem. O site tambem registra parcerias com o Instituto PROA e a iFood.",
+      "fonte": "https://escoladanuvem.org/seja-nossa-parceira/"
+    },
+    {
+      "id": "contato",
+      "categoria": "contato",
+      "titulo": "Canais de contato e redes sociais",
+      "palavras_chave": ["contato", "telefone", "email", "e-mail", "whatsapp", "falar", "atendimento", "redes sociais", "instagram", "linkedin"],
+      "conteudo": "Contato da Escola da Nuvem: e-mail contato@escoladanuvem.org; telefone e WhatsApp +55 11 99533-9226 (wa.me/5511995339226). Ha tambem um formulario de contato na pagina https://escoladanuvem.org/contato/ . Redes sociais: Instagram @escola_da_nuvem, LinkedIn Escola da Nuvem, YouTube @escoladanuvem, Facebook EscolaDaNuvemOficial e TikTok @escoladanuvem. Assessoria de imprensa: Mondoni Press (thabata@mondonipress.com.br e natalia@mondonipress.com.br).",
+      "fonte": "https://escoladanuvem.org/contato/"
+    },
+    {
+      "id": "transparencia",
+      "categoria": "institucional",
+      "titulo": "Transparencia, governanca e canal de etica",
+      "palavras_chave": ["transparencia", "governanca", "estatuto", "codigo de conduta", "relatorio", "auditoria", "prestacao de contas", "etica", "denuncia", "ods"],
+      "conteudo": "A Escola da Nuvem mantem um portal de transparencia com o Codigo de Conduta (principios, valores e comportamentos esperados), o Estatuto da organizacao e relatorios anuais: Relatorio de Atividades de 2025 e relatorios de auditoria e de atividades de 2024, 2023 e 2022. A EdN integra o Movimento Nacional ODS e faz parte da Rede Brasil do Pacto Global da ONU. O canal de etica e denuncias e o e-mail etica.acao@escoladanuvem.org, descrito como um espaco seguro e confidencial. Portal: https://escoladanuvem.org/transparencia/",
+      "fonte": "https://escoladanuvem.org/transparencia/"
+    },
+    {
+      "id": "links-oficiais",
+      "categoria": "inscricao",
+      "titulo": "Links oficiais da Escola da Nuvem",
+      "palavras_chave": ["link", "site", "url", "endereco do site", "pagina", "onde acessar"],
+      "conteudo": "Links oficiais da Escola da Nuvem: site oficial https://escoladanuvem.org/ ; cursos e inscricoes https://escoladanuvem.org/cursos/ ; sobre https://escoladanuvem.org/sobre/ ; empregabilidade https://escoladanuvem.org/jornada-de-evolucao-profissional/ ; seja voluntario https://escoladanuvem.org/seja-voluntario/ ; seja nossa parceira https://escoladanuvem.org/seja-nossa-parceira/ ; transparencia https://escoladanuvem.org/transparencia/ ; contato https://escoladanuvem.org/contato/ ; blog https://escoladanuvem.org/blog/ . Nunca use nem invente links diferentes destes.",
+      "fonte": "https://escoladanuvem.org/"
+    },
+    {
+      "id": "turmas-datas",
+      "categoria": "inscricao",
+      "titulo": "Datas, turmas e vagas abertas",
+      "palavras_chave": ["quando", "data", "turma", "proxima turma", "calendario", "prazo", "vagas abertas", "inscricoes abertas", "comeca"],
+      "conteudo": "As datas de abertura de inscricoes, o inicio das turmas e a quantidade de vagas mudam a cada ciclo e NAO estao registradas nesta base de conhecimento. Nunca invente datas, prazos ou numero de vagas. Quando o usuario perguntar sobre isso, oriente-o a consultar a pagina oficial de cursos, onde o calendario vigente e publicado: https://escoladanuvem.org/cursos/",
+      "fonte": "https://escoladanuvem.org/cursos/"
+    }
+  ]
+}

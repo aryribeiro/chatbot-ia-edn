@@ -1,5 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
+import html
 import os
 import re
 import requests
@@ -77,6 +78,42 @@ STOPWORDS = {
     "gostaria", "queria", "saber", "preciso", "pode", "poderia", "por favor", "oi",
     "ola", "bom", "boa", "dia", "tarde", "noite",
 }
+
+
+# Captura links markdown [rótulo](url) OU URLs cruas, numa única passada
+# (passada única evita reprocessar a URL de um link já convertido em <a>).
+PADRAO_LINK = re.compile(
+    r'\[(?P<rotulo>[^\]]+)\]\((?P<md_url>https?://[^\s)]+)\)'
+    r'|(?P<url>https?://[^\s<>"]+)'
+)
+
+
+def linkificar(texto: str) -> str:
+    """
+    Escapa o HTML do texto e converte URLs e links markdown em <a> clicáveis.
+
+    O balão da conversa é renderizado com unsafe_allow_html, então o conteúdo
+    precisa ser escapado antes: só as âncoras que geramos aqui viram HTML.
+    """
+    def _para_anchor(m: re.Match) -> str:
+        if m.group("md_url"):
+            rotulo = m.group("rotulo")
+            url = m.group("md_url")
+            sufixo = ""
+        else:
+            url = m.group("url")
+            # Pontuação final da frase não faz parte da URL (ex.: "...cursos/.")
+            sufixo = ""
+            while url and url[-1] in ".,;:!?)":
+                sufixo = url[-1] + sufixo
+                url = url[:-1]
+            rotulo = url
+        return (
+            f'<a href="{url}" target="_blank" rel="noopener noreferrer">{rotulo}</a>'
+            f'{sufixo}'
+        )
+
+    return PADRAO_LINK.sub(_para_anchor, html.escape(texto))
 
 
 def normalizar(texto: str) -> str:
@@ -521,6 +558,19 @@ class ChatUI:
             border-bottom-left-radius: 5px;
             margin-right: 20%;
         }
+        /* Links dentro dos balões: azul sublinhado, quebrando URLs longas */
+        .bot-message a,
+        .user-message a,
+        .error-message a {
+            color: #0066cc;
+            text-decoration: underline;
+            overflow-wrap: anywhere;
+        }
+        .bot-message a:hover,
+        .user-message a:hover,
+        .error-message a:hover {
+            color: #004a99;
+        }
         .chat-header {
             text-align: center;
             margin-bottom: 20px;
@@ -553,25 +603,25 @@ class ChatUI:
         """, unsafe_allow_html=True)
 
     def render_conversation(self, history: List[dict]):
-        """Renderiza a conversa com estilos CSS."""
+        """Renderiza a conversa com estilos CSS e links clicáveis."""
         for message in history:
+            content = linkificar(message["content"])
+
             if message["role"] == "user":
                 st.markdown(
-                    f'<div class="user-message">👤 {message["content"]}</div>',
+                    f'<div class="user-message">👤 {content}</div>',
+                    unsafe_allow_html=True
+                )
+            elif message["content"].startswith("⚠️"):
+                st.markdown(
+                    f'<div class="error-message">⛅ {content}</div>',
                     unsafe_allow_html=True
                 )
             else:
-                content = message["content"]
-                if content.startswith("⚠️"):
-                    st.markdown(
-                        f'<div class="error-message">⛅ {content}</div>',
-                        unsafe_allow_html=True
-                    )
-                else:
-                    st.markdown(
-                        f'<div class="bot-message">⛅ {content}</div>',
-                        unsafe_allow_html=True
-                    )
+                st.markdown(
+                    f'<div class="bot-message">⛅ {content}</div>',
+                    unsafe_allow_html=True
+                )
 
     def render_input_form(self) -> Tuple[str, bool]:
         """Renderiza o formulário de entrada."""

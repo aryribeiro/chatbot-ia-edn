@@ -1,6 +1,2 @@
-streamlit
-streamlit-authenticator
+streamlit==1.47.1
 requests
-pandas
-boto3
-awscli

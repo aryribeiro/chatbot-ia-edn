@@ -1,32 +1,33 @@
 Obs.: caso o app esteja no modo "sleeping" (dormindo) ao entrar, basta clicar no botão que estará disponível e aguardar, para ativar o mesmo.
 ![print chatbot edn](https://github.com/user-attachments/assets/a7e1cbef-f5b2-48ee-8b5e-64a60a68eab4)
 
-## ChatBot EdN com AWS Bedrock
+## ChatBot EdN com IA
 
-Este é um chatbot interativo desenvolvido com [Streamlit](https://streamlit.io/) e integrado à AWS Bedrock usando o modelo Claude (anthropic.claude-v2.1). O chatbot responde dúvidas relacionadas à Escola da Nuvem (EdN), uma ONG que oferece programas e cursos voltados para tecnologia, computação em nuvem e inteligência artificial.
+Chatbot interativo desenvolvido com [Streamlit](https://streamlit.io/) e integrado ao modelo GPT-3.5 Turbo através da API do [OpenRouter](https://openrouter.ai/). O chatbot responde dúvidas relacionadas à Escola da Nuvem (EdN), uma ONG que oferece programas e cursos voltados para tecnologia, computação em nuvem e inteligência artificial.
 
 ## Funcionalidades
 
-- Interface de chat com histórico
-- Respostas personalizadas sobre a Escola da Nuvem
-- Integração com AWS Bedrock (modelo Claude)
-- Utilização de streaming para resposta em tempo real
+- Interface de chat com histórico e balões de mensagem
+- Respostas restritas ao contexto da Escola da Nuvem (system prompt com regras anti-alucinação)
+- Cache de respostas em SQLite (expira em 1 hora)
+- Retentativas com backoff exponencial em caso de rate limit ou erro de servidor
+- Truncamento automático do histórico para controlar o consumo de tokens
 
 ## Requisitos
 
 - Python 3.8 ou superior
-- Conta AWS com permissões adequadas para o serviço Bedrock
-- Chaves AWS válidas no arquivo `.streamlit/secrets.toml`
+- Chave da API do OpenRouter em `.streamlit/secrets.toml`
 
 ## Como rodar localmente
 
-1. Crie um arquivo `.streamlit/secrets.toml` com as seguintes variáveis:
+1. Crie um arquivo `.streamlit/secrets.toml` com o seguinte conteúdo:
 
+```toml
+[openrouter]
+OPENROUTER_API_KEY = "sua-chave-do-openrouter"
 ```
-[aws]
-AWS_ACCESS_KEY_ID = "sua-access-key-id"
-AWS_SECRET_ACCESS_KEY = "sua-secret-access-key"
-```
+
+Alternativamente, defina a variável de ambiente `OPENROUTER_API_KEY`.
 
 2. Instale as dependências:
 
@@ -44,4 +45,4 @@ streamlit run app.py
 
 Este projeto é de código aberto e foi criado em homenagem à Escola da Nuvem.
 
-Desenvolvido por Ary Ribeiro: aryribeiro@gmail.com
+Por **Ary Ribeiro**: [LinkedIn](https://www.linkedin.com/in/aryribeiro)
